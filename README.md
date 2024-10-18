@@ -1,5 +1,7 @@
-# 2024-10-Android_Adv
-안드로이드 심화 과정
+# Android Advanced
+- 안드로이드 심화 과정
+- 2024년 10월
+- ![build status](https://github.com/Simseok-Highschool-Coding-Class/2024-10-Android-Advanced/actions/workflows/android.yml/badge.svg)
 
 ### 프로젝트 구조
 - https://drive.google.com/file/d/1FYq4hz2zo1hvV1sCmP4pyUZLFGvXj05v/view?usp=sharing
