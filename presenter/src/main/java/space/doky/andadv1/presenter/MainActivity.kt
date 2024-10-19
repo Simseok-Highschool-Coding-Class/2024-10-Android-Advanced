@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        binding.view = this
-//        binding.viewModel = viewModel
 
 //        binding.textBox.addTextChangedListener {
 //            AppLog.e(TAG, "onCreate", "text changed: $it")

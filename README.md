@@ -10,3 +10,19 @@
 - 인터넷 통신
 - Shared Preferences (protobuf)
 - 시간, 파일, 공유, 인쇄 관련 util
+
+### Day 1
+- 프로젝트 트리 살펴보기
+  - gradle 파일 살펴보기
+  - AndroidManifest.xml
+- 구조 분석해보기
+  - 멀티 모듈 구조?
+  - view - viewmodel - usecase - data
+- 디자인 살펴보기
+  - xml 다루어보기
+  - 앱아이콘 바꿔보기
+  - colors, strings ...
+- 비즈니스 로직 개발
+  - 간단한 코드 사용해보기
+  - 메모리 vs. 디스크
+  - UseCase 사용해보기
