@@ -17,17 +17,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        binding.textBox.addTextChangedListener {
-//            AppLog.e(TAG, "onCreate", "text changed: $it")
-//            viewModel.setSampleText(it.toString())
-//        }
-//
-//        lifecycleScope.launch {
-//            viewModel.sampleTextSharedFlow.collectLatest {
-//                AppLog.e(TAG, "onCreate", "shared flow: $it")
-//                binding.title.text = it
-//            }
-//        }
+
+        // 1. 버튼을 눌렀을 때
+        binding.button1.setOnClickListener {
+
+            // 2. EditText에 입력한 값을 가져오기
+            val inputText = binding.textBox.text
+
+            // 3. 화면에 띄우기
+            binding.title.text = inputText
+            binding.button1.text = inputText
+        }
     }
 
     companion object {
