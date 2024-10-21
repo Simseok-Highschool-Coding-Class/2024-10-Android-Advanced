@@ -14,7 +14,7 @@
         <!-- To use Sharing feature -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.doky.andadv1.fileprovider"
+            android:authorities="space.doky.andadv1.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
