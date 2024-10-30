@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
 import space.doky.andadv1.presenter.databinding.ActivityMainBinding
 import space.doky.andadv1.presenter.viewmodel.MainViewModel
+import space.doky.andadv1.util.AppLog
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -14,19 +15,37 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppLog.e("=======", "onCreate")
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-        // 1. 버튼을 눌렀을 때
-        binding.button1.setOnClickListener {
 
-            // 2. EditText에 입력한 값을 가져오기
-            val inputText = binding.textBox.text
+        // 텍스트 박스에 입력한 수만큼 카운트 값을 올리고 내리고 싶다.
 
-            // 3. 화면에 띄우기
-            binding.title.text = inputText
-            binding.button1.text = inputText
+        // 상태 값 초기 업데이트
+        binding.labelCount.text = "${viewModel.count}"
+
+        // + 버튼 처리
+        binding.buttonPlus.setOnClickListener {
+            // try-catch 문으로 에러를 처리할 수 있습니다.
+            try {
+                val inputCount = binding.numberInput.text.toString().toInt()
+                viewModel.addToCount(inputCount)
+            } catch (e: Exception) { }
+
+            binding.labelCount.text = "${viewModel.count}"
+        }
+
+        // - 버튼 처리
+        binding.buttonMinus.setOnClickListener {
+            try {
+                val inputCount = binding.numberInput.text.toString().toInt()
+                viewModel.addToCount(-inputCount)
+            } catch (e: Exception) { }
+
+            binding.labelCount.text = "${viewModel.count}"
         }
     }
 

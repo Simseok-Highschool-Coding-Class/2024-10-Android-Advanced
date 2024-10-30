@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/label_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:text="안녕하세요 :D"
-            android:textSize="36sp"
-            android:textColor="#00FF00"
-            android:textStyle="bold|italic"/>
+            android:textSize="70sp"
+            android:text="0"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginTop="50dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/text_box"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:autofillHints=""
-                android:inputType="text"
-                android:hint="여기에 텍스트를 입력하세요~~"
-                android:maxLines="1"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
 
             <Button
-                android:id="@+id/button1"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:text="버튼버튼"/>
+                android:id="@+id/button_plus"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="50sp"
+                android:backgroundTint="#990000"
+                android:text="+"/>
+
+            <Button
+                android:id="@+id/button_minus"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textSize="50sp"
+                android:backgroundTint="#009900"
+                android:text="-"/>
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/number_input"
+            android:layout_marginTop="50dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"/>
     </LinearLayout>
 </layout>
